@@ -7,13 +7,71 @@
    <head>
       <meta charset="utf-8" />
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/slider.css' %}">
    </head>
    <body>
-   	<h3 class="">Опыт работы</h3><hr><br>
-   	<h5 class="">ТОО "Astana Asset Managment" - Инженер по видео и звуку. С 1 ноября 2017 года по н.в.</h5><br>
+   	<div class="cent">
+   		<h3 class="">Опыт работы</h3><hr><br>
+   	<h4 class="">ТОО "Astana Asset Managment" - Инженер по видео и звуку. С 1 ноября 2017 года по н.в.</h4><br>
    	<h3 class="">Образование</h3><hr><br>
+   	<div class="column">
+   		<h5>Казахский Университет экономики финансов и международной торговли</h5>
+        <h5>Вычислительная техника и программное обеспечение 2013-2017 гг.</h5>
+   		<div class="blokimg">
+         <div class="overlay" id="contenedor1">
+           <div class="overlay_container">
+             <a href="#close">
+               <img src="{% static 'img/5.jpg' %}"/>
+             </a>
+           </div>
+         </div>
+         <a href="#contenedor1">
+           <img class="image" src="{% static 'img/5.jpg' %}" id="imagenM1" />
+         </a>
+	</div>
+   	</div>
    	<h3 class="">Дополнительная информация</h3><hr><br>
+   	<h4>Знание языков: французский, русский, казахский, английский</h4><br>
+   	<h4>Качества: прагматичность и пунктуальность</h4><br>
+   	<h4>Технические навыки: Компьютерная инженерия, Linux, Django, HTML5, CSS, Node.js, Git и т.д.</h4><br>
+   	<h4>Занятие в свободное время: Книги, киберспорт и спорт</h4><br>
    	<h3 class="">Дополнительное образование</h4><hr><br>
+   	<div class="all">
+   		<input checked type="radio" name="respond" id="desktop">
+   			<article id="slider">
+   					<input checked type="radio" name="slider" id="switch1">
+   					<input type="radio" name="slider" id="switch2">
+   					<input type="radio" name="slider" id="switch3">
+   					<input type="radio" name="slider" id="switch4">
+   					<input type="radio" name="slider" id="switch5">
+   				<div id="slides">
+   					<div id="overflow">
+   						<div class="image1">
+   							<article><img src="{% static 'img/111.jpg' %}"></article>
+   							<article><img src="{% static 'img/112.jpg' %}"></article>
+   							<article><img src="{% static 'img/113.jpg' %}"></article>
+   							<article><img src="{% static 'img/114.jpg' %}"></article>
+   							<article><img src="{% static 'img/115.jpg' %}"></article>
+   						</div>
+   					</div>
+   				</div>
+   				<div id="controls">
+   					<label for="switch1"></label>
+   					<label for="switch2"></label>
+   					<label for="switch3"></label>
+   					<label for="switch4"></label>
+   					<label for="switch5"></label>
+   				</div>
+   				<div id="active">
+   					<label for="switch1"></label>
+   					<label for="switch2"></label>
+   					<label for="switch3"></label>
+   					<label for="switch4"></label>
+   					<label for="switch5"></label>
+   				</div>
+   			</article>
+   		</div><br><br>
+   	</div>
    </body>
 </html>
 
