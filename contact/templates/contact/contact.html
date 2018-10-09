@@ -6,13 +6,11 @@
    <head>
       <meta charset="utf-8" />
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/slider.css' %}">
    </head>
    <body>
-     <div class="cent">
-     	<h1 class="">{{article.title}}</h1><br>
-     	<h2 class="">Опубликовано: {{article.date|date:"Y-m-d в H:i:s"}}</h2><br>
-     	<p>{{article.body|safe|linebreaks}}</p><br><br>
-     </div>
+      <h1>Hello World!</h1>
    </body>
 </html>
+
 {% endblock %}

@@ -1,20 +1,12 @@
 .cent{
-	margin-left: 15px;
+	margin: 3%;
 }
 
 
 
 .column {
- -webkit-column-width: auto;
- -moz-column-width: 200px;
- column-width: 200px;
- -webkit-column-count: 3;
- -moz-column-count: 3;
- column-count: 3;
- -webkit-column-gap: 30px;
- -moz-column-gap: 30px;
- column-gap: 30px;
- font-family: 'Lobster';
+ column-count: 2;
+ margin: 1%;
 }
 
 

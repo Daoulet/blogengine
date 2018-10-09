@@ -1,0 +1,35 @@
+{% extends "mainApp/wrapper.html" %}
+{% block content %}
+{% load staticfiles %}
+            
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   </head>
+   <body>
+   	<h1 style="text-align: center; color: red">Яндекс карта.</h1>
+   	<div id="map" style="width: 600px; height: 400px; margin: 7%"></div>
+   	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+      
+        function init(){ 
+            var myMap = new ymaps.Map("map", {
+                center: [51.124965, 71.437430],
+                zoom: 7
+            }); 
+            
+            var myPlacemark = new ymaps.Placemark([51.124965, 71.437430], {
+                hintContent: 'Содержимое всплывающей подсказки',
+                balloonContent: 'Содержимое балуна'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+   </body>
+</html>
+
+{% endblock %}
