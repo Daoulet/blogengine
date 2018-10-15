@@ -6,4 +6,7 @@ class Article(models.Model):
     date = models.DateTimeField()
 
     def __str__(self):
-    	return self.title
+    	return "Заголовок %s %s" % (self.date, self.title,)
+ #  or just
+ #  def __str__(self):
+ #   	return self.title
