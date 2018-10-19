@@ -1,49 +1,53 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8" />
-      <title>Партфолио</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
-   </head>
-   <body>
-      <header>
-         <div class="logo"><a href="/"><img class="graphic_logo" src="{% static 'img/1.png' %}"></a>
-         </div>
-         <nav>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="{% static 'img/001.png' %}" type="image/x-icon">
+    <title>Партфолио</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="/"><img class="graphic_logo" src="{% static 'img/1.png' %}"></a> </div>
+        <div class="logo"><a href="/">{% include "mainApp//include.html" %}</a></div>
+        <nav>
             <div class="topnav" id="myTopnav">
-               <a href="/">ГЛАВНАЯ</a>
-               <a href="/resume">РЕЗЮМЕ</a>
-               <a href="/blog">БЛОГ &raquo;</a>
-               <a href="/contact">КОНТАКТЫ</a>
-               <a href="/location">ЛОКАЦИЯ</a>
-               <a href="#" id="menu" class="icon">&#9776;</a>
+                <a href="/">ГЛАВНАЯ</a>
+                <a href="/resume">РЕЗЮМЕ</a>
+                <a href="/blog">БЛОГ &raquo;</a>
+                <a href="/contact">КОНТАКТЫ</a>
+                <a href="/location">ЛОКАЦИЯ</a>
+                <a href="#" id="menu" class="icon">&#9776;</a>
             </div>
-         </nav>
-      </header>
-            {% block content %}
-            {% endblock %}
-      <footer>
-         <nav>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <nav>
             <a href="/">ГЛАВНАЯ</a>
             <a href="/resume">РЕЗЮМЕ</a>
             <a href="/blog">БЛОГ &raquo;</a>
             <a href="/contact">КОНТАКТЫ</a>
             <a href="/location">ЛОКАЦИЯ</a>
-         </nav>
-         <div class="logo">
+        </nav>
+        <div class="logo">
             <a href=""><img class="graphic_logo" src="{% static 'img/1.png' %}"></a>
-         </div>
-         <div class="social">
+        </div>
+        <div class="social">
             <a style="color: white; margin: center">Мои контакты в соц. сетях</a>
             <a href="https://www.facebook.com/Daoulet"> <img src="{% static 'img/2.png' %}"></a>
             <a href="#"> <img src="{% static 'img/3.png' %}"></a>
             <a href="https://www.instagram.com/dauletbimaganbetov/"> <img src="{% static 'img/4.png' %}"></a>
-         </div><br>
-         <p>Все права защещены 2018</p>
-      </footer>
-      <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
-   </body>
+        </div><br>
+        <p>Все права защещены 2018</p>
+    </footer>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+
 </html>
+<!-- Ctrl + Shift + H -->
