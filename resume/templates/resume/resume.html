@@ -9,6 +9,31 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/slider.css' %}">
 </head>
+<style type="text/css">
+#maket {
+    width: 100%;
+    /* Ширина всей таблицы */
+}
+
+TD {
+    vertical-align: top;
+    /* Вертикальное выравнивание в ячейках */
+    padding: 10px;
+    /* Поля вокруг ячеек */
+}
+
+TD#leftcol {
+    width: 200px;
+    /* Ширина левой колонки */
+    /* background: #ccc; */
+    /* Цвет фона левой колонки */
+}
+
+TD#rightcol {
+    /* background: #fc3; */
+    /* Цвет фона правой колонки */
+}
+</style>
 
 <body>
     <div class="cent">
@@ -19,18 +44,26 @@
         <h3 class="">Образование</h3>
         <hr><br>
         <div class="column">
-            <div class="blokimg">
-                <div class="overlay" id="contenedor1">
-                    <div class="overlay_container">
-                        <a href="#close"><img src="{% static 'img/5.jpg' %}"/></a>
-                    </div>
-                </div>
-                <a href="#contenedor1">
+            <table cellspacing="0" id="maket">
+                <tr>
+                    <td id="leftcol">
+                        <div class="blokimg">
+                            <div class="overlay" id="contenedor1">
+                                <div class="overlay_container">
+                                    <a href="#close"><img src="{% static 'img/5.jpg' %}"/></a>
+                                </div>
+                            </div>
+                            <a href="#contenedor1">
                   <img class="image" src="{% static 'img/5.jpg' %}" id="imagenM1" />
+                  </div>
                </a>
-                <h5>Казахский Университет экономики финансов и международной торговли</h5>
-                <h5>Вычислительная техника и программное обеспечение 2013-2017 гг.</h5>
-            </div>
+                    </td>
+                    <td id="rightcol">
+                        <h5>Казахский Университет экономики финансов и международной торговли</h5>
+                        <h5>Вычислительная техника и программное обеспечение 2013-2017 гг.</h5>
+                    </td>
+                </tr>
+            </table>
         </div>
         <h3 class="">Дополнительная информация</h3>
         <hr><br>

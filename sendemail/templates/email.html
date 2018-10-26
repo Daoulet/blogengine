@@ -13,12 +13,12 @@
 <body>
     <div style="text-align: center;">
         <!-- templates/email.html -->
-        <h1>Напишите мне</h1>
-        <form method="post">
+        <h1>Напишите мне</h1><br>
+        <form method="post" style="margin: 2px; line-height: 1.9;">
             {% csrf_token %}
             {{ form.as_p }}
             <div class="form-actions">
-                <button type="submit">Отправить</button>
+                <button type="submit" style="width: 100px; height: 30px">Отправить</button>
             </div>
     </div>
     </form><br>
