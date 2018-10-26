@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'contact',
+    'sendemail.apps.SendemailConfig',
     'blog',
     'resume',
     'mainApp',
@@ -61,6 +61,7 @@ ROOT_URLCONF = 'partfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+
             ],
         },
     },
@@ -133,3 +135,5 @@ STATICFILES_DIRS = [
     '/static/js',
     '/static/img',
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
