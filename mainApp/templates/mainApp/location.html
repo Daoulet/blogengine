@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <h1 style="text-align: center; color: red">Яндекс карта.</h1>
-    <div id="map" style="width: 700px; height: 700px; margin: 3%; border: 9px solid #ff0000;"></div>
+    <h1 style="margin-left: 3%; color: black;">Яндекс карта.</h1>
+    <div id="map" style="width: 500px; height: 500px; margin: 3%; border: 2px solid black;"></div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
     ymaps.ready(init);
@@ -19,7 +19,7 @@
     function init() {
         var myMap = new ymaps.Map("map", {
             center: [51.124965, 71.437430],
-            zoom: 7
+            zoom: 10
         });
 
         var myPlacemark = new ymaps.Placemark([51.124965, 71.437430], {
