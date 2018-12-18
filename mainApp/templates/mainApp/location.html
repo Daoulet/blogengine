@@ -14,21 +14,21 @@
     <div id="map" style="width: auto; height: 300px; margin: 3%; margin-left: 10%; margin-right: 10%; border: 2px solid black;"></div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
-    ymaps.ready(init);
+        ymaps.ready(init);
 
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [51.124965, 71.437430],
-            zoom: 10
-        });
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [51.124965, 71.437430],
+                zoom: 10
+            });
 
-        var myPlacemark = new ymaps.Placemark([51.124965, 71.437430], {
-            hintContent: 'Содержимое всплывающей подсказки',
-            balloonContent: 'Содержимое балуна'
-        });
+            var myPlacemark = new ymaps.Placemark([51.124965, 71.437430], {
+                hintContent: 'Содержимое всплывающей подсказки',
+                balloonContent: 'Содержимое балуна'
+            });
 
-        myMap.geoObjects.add(myPlacemark);
-    }
+            myMap.geoObjects.add(myPlacemark);
+        }
     </script>
 </body>
 
