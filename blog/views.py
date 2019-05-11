@@ -9,10 +9,15 @@ from .utils import *
 from .forms import TagForm, PostForm
 
 from django.contrib.auth.mixins import LoginRequiredMixin # Ограничения 
+from django.core.paginator import Paginator
 
 def  post_list(request):
 	posts = Post.objects.all()
-	return render(request, 'blog/index.html', context={'posts': posts})
+	paginator = Paginator(posts, 2)
+
+	page = paginator.get_page(1 )
+
+	return render(request, 'blog/index.html', context={'posts': page.object_list})
 
 class PostDetail(ObjectDetailMixin, View):
 	model = Post
