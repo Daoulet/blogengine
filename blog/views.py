@@ -14,10 +14,10 @@ from django.core.paginator import Paginator
 def  post_list(request):
 	posts = Post.objects.all()
 	paginator = Paginator(posts, 2)
+	page_number = request.GET.get('page', 1)
+	page = paginator.get_page(page_number)
 
-	page = paginator.get_page(1 )
-
-	return render(request, 'blog/index.html', context={'posts': page.object_list})
+	return render(request, 'blog/index.html', context={'posts': page})
 
 class PostDetail(ObjectDetailMixin, View):
 	model = Post
